@@ -27,4 +27,15 @@ class GenerationTest < Test::Unit::TestCase
     new_generation = generation.next
     assert_equal new_generation.live_cells, nil
   end
+
+  def test_next_for_generation_with_one_live_cell_and_one_neighbour_live_cell_returns_generation_with_no_live_cells
+    grid = GameOfLife::Grid.new(3,3)
+    live_cells = [
+      GameOfLife::Cell.new(0,0,true),
+      GameOfLife::Cell.new(0,1,true)
+    ]
+    generation = GameOfLife::Generation.new(grid, live_cells)
+    new_generation = generation.next
+    assert_equal new_generation.live_cells, nil
+  end
 end
