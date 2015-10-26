@@ -1,11 +1,12 @@
 module GameOfLife
   class Generation
-    def initialize(grid)
+    def initialize(grid, live_cells=nil)
       @grid = grid
+      @live_cells = live_cells
     end
 
     def live_cells
-      0
+      @live_cells
     end
 
   end

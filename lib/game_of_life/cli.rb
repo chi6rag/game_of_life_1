@@ -32,10 +32,10 @@ module GameOfLife
         print "\nChoice: "
         choice = gets.chomp.to_i
         case choice
-        when 1:
+        when 1
           generation = generation.next
           # print generation
-        when 2:
+        when 2
           System.exit(0)
         end
       end
