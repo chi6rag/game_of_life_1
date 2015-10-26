@@ -25,6 +25,6 @@ class GenerationTest < Test::Unit::TestCase
     grid = GameOfLife::Grid.new(3,3)
     generation = GameOfLife::Generation.new(grid)
     new_generation = generation.next
-    assert_equal new_generation.live_cells.count, 0
+    assert_equal new_generation.live_cells, nil
   end
 end

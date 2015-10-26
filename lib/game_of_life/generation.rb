@@ -9,5 +9,9 @@ module GameOfLife
       @live_cells
     end
 
+    def next
+      Generation.new(@grid)
+    end
+
   end
 end
