@@ -15,5 +15,11 @@ module GameOfLife
                      )
       return false
     end
+
+    def is_neighbour? cell
+      (cell.x_coordinate - self.x_coordinate).between?(-1, 1) &&
+      (cell.y_coordinate - self.y_coordinate).between?(-1, 1)
+    end
+
   end
 end
